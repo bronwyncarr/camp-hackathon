@@ -15,7 +15,7 @@ class SpotsController < ApplicationController
   def edit; end
 
   def create
-    @spot = current_user.spots.new(post_params)
+    @spot = current_user.spots.new(spot_params)
 
     respond_to do |format|
       if @spot.save!
@@ -30,7 +30,7 @@ class SpotsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @spot.update(post_params)
+      if @spot.update(spot_params)
         format.html { redirect_to @spot, notice: 'Spot was successfully updated.' }
         format.json { render :show, status: :ok, location: @spot }
       else
@@ -51,7 +51,7 @@ class SpotsController < ApplicationController
     @spot = Spot.find(params[:id])
   end
 
-  def post_params
+  def spot_params
     params.require(:spot).permit :name, :description, :max_campers, :has_power, :has_water, :has_toilet, :has_shower, :photo, address_attributes: %i[street_number street_name postcode state]
   end
 end
