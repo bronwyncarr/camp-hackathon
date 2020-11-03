@@ -1,0 +1,22 @@
+// Place all the styles related to the Spots controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.spots-containter {
+  display: flex;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 200px;
+  margin: 20px;
+}
+
+.icons-button {
+  display: flex;
+  justify-content: space-between;
+}
+
