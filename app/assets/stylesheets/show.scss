@@ -1,3 +1,8 @@
+.photo{
+  width: 100%;
+  object-fit: cover;
+  max-height: 50vh;
+}
 .details {
   background-color: #f1f3ea;
   .desc {
