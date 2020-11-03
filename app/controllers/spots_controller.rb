@@ -29,6 +29,18 @@ class SpotsController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @spot.update(post_params)
+        format.html { redirect_to @spot, notice: 'Spot was successfully updated.' }
+        format.json { render :show, status: :ok, location: @spot }
+      else
+        format.html { render :edit }
+        format.json { render json: @spot.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def destroy
     @spot.destroy
     redirect_to spots_path
