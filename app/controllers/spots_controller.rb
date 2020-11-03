@@ -12,6 +12,9 @@ class SpotsController < ApplicationController
     @spot = Spot.new
   end
 
+  def edit
+  end
+
   def create
     @spot = current_user.spots.new(post_params)
 
@@ -25,8 +28,6 @@ class SpotsController < ApplicationController
       end
     end
   end
-
-  def edit; end
 
   def destroy
     @spot.destroy

@@ -18,5 +18,8 @@
         </ul>
     </div>
   </div>
+  <%= link_to 'Edit', edit_spot_path(@spot), class: "btn show-btn btn-secondary" %>
+  <%= link_to 'Destroy', spot_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn show-btn btn-secondary" %>
+  <br>
   <%= link_to "Back to list", spots_path, class: "btn show-btn btn-secondary" %>
 </div>
