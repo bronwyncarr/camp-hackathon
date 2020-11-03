@@ -1,0 +1,26 @@
+
+<h1>Favourite spots</h1>
+<% if @spots %>
+  <%= @spots.each do |spot| %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= spot.name %></h5>
+        <div class="icons">
+          <% if spot.has_power %> 🔌 <% end %>
+          <% if spot.has_water %> 🚰 <% end %>
+          <% if spot.has_toilet %> 🚽 <% end %>
+          <% if spot.has_shower %> 🚿 <% end %>
+        </div>
+        <a href="#" class="btn btn-primary">Details</a>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+ <h4>You have no camping spots added to your favourite list yet.</h4>
+ <h4>Let's add some!</h4>
+<% end %>
+
+
+ 
+  
