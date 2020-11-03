@@ -3,7 +3,7 @@ class SpotsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @spots = Spot.all
+    @spots = Spot.all.where(user_id: current_user[:id])
   end
 
   def show; end
@@ -12,8 +12,7 @@ class SpotsController < ApplicationController
     @spot = Spot.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @spot = current_user.spots.new(post_params)
