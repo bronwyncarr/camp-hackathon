@@ -14,10 +14,13 @@
   width: 200px;
   margin: 20px;
   background-color: #f1f3ea;
+  .icons-button {
+    display: flex;
+    justify-content: space-between;
+    .icons {
+      font-size: 24px;
+    }
+  }
 }
 
-.icons-button {
-  display: flex;
-  justify-content: space-between;
-}
 
