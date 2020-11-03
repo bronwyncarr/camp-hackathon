@@ -1,6 +1,8 @@
 <%= render partial: "shared/nav" %>
 <div class="row">
-  <%= image_tag @spot.photo if @spot.photo.attached? %>
+  <% if @spot.photo.attached? == true %>
+    <%= image_tag @spot.photo, class:'photo' %>
+  <% end %>
 </div>
 <h2><%= @spot.name %></h2>
 <div class="container">
