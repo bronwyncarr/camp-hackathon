@@ -1,0 +1,77 @@
+<%=  form_with model: @spot, local: true do |f| %>
+  <%= f.fields_for :address, Address.new do |a| %>
+    <div class="form-label">
+      <%= a.label :street_number %> 
+    </div>
+    <div class="form-field">
+      <%= a.number_field :street_number %>  
+    </div>
+    <div class="form-label">
+      <%= a.label :street_name %> 
+    </div>
+    <div class="form-field">
+      <%= a.text_field :street_name %> 
+    </div>
+    <div class="form-label">
+      <%= a.label :postcode %> 
+    </div>
+    <div class="form-field">
+      <%= a.text_field :postcode %>
+    </div>
+    <div class="form-label">
+      <%= a.label :state %> 
+    </div>
+    <div class="form-field">
+      <%= a.text_field :state %>  
+    </div>
+  <% end %>
+
+  <div class="form-label">
+    <%= f.label :name %> 
+  </div>
+  <div class="form-field">
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-label">
+    <%= f.label :description %> 
+  </div>
+  <div class="form-field">
+    <%= f.text_field :description %>
+  </div>
+  <div class="form-label">
+    <%= f.label :max_campers %> 
+  </div>
+  <div class="form-field">
+    <%= f.number_field :max_campers %>
+  </div>
+  <div class="form-label">
+    <%= f.label :has_power %> 
+  </div>
+  <div class="form-field">
+    <%= f.check_box :has_power, {}, true, false  %>
+  </div>
+  <div class="form-label">
+    <%= f.label :has_water %> 
+  </div>
+  <div class="form-field">
+    <%= f.check_box :has_water, {}, true, false  %>
+  </div>
+  <div class="form-label">
+    <%= f.label :has_toilets %> 
+  </div>
+  <div class="form-field">
+    <%= f.check_box :has_toilet, {}, true, false  %>
+  </div>
+  <div class="form-label">
+    <%= f.label :has_shower %> 
+  </div>
+  <div class="form-field">
+    <%= f.check_box :has_shower, {}, true, false  %>
+  </div>
+  <div class="form-field">
+    <%= f.file_field :photo %>
+  </div>
+  <div class="form-field">
+    <%= f.submit %>
+  </div>
+<% end %> 
