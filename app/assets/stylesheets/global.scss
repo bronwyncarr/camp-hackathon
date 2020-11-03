@@ -17,6 +17,16 @@ body {
 
 .navbar {
   border-bottom: 2px double #3e403b;
+  background-color: #3e403b;
+  color: #babfa8;
+}
+
+.navbar-toggler-icon {
+  color:#babfa8;
+}
+
+.nav-link {
+  color: #babfa8;
 }
 
 .btn {

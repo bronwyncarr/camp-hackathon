@@ -1,8 +1,9 @@
+<%= render partial: "shared/nav" %>
 <h2>Found a Great Camping Spot?</h2>
 <br>
 <div class="container">
   <h3>Save it for your next trip!</h3>
   <br>
-  <%= render 'shared/form', spot: @spot%>
+  <%= render 'shared/form', spot: @spot %>
   <%= link_to 'Back', spots_path, class: "btn show-btn btn-secondary" %>
 </div>
