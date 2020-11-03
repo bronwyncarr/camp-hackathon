@@ -1,3 +1,4 @@
+<%= render partial: "shared/nav" %>
 <h2>Favourite Spots</h2>
 <div class ='container spots-containter'>
   <% if @spots %>
@@ -13,7 +14,7 @@
               <% if spot.has_toilet %> 🚽 <% end %>
               <% if spot.has_shower %> 🚿 <% end %>
             </div>
-            <a href="#" class="btn btn-success">Details</a>
+            <%= link_to "Details", spot, class: "btn btn-secondary" %>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+<%= render partial: "shared/nav" %>
 <div class="row">
   <%# <%= image_tag @spot.image if @spot.image.attached? %> %>
 </div>
@@ -17,4 +18,5 @@
         </ul>
     </div>
   </div>
+  <%= link_to "Back to list", spots_path, class: "btn show-btn btn-secondary" %>
 </div>
