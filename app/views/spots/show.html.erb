@@ -1,14 +1,13 @@
-<h1><%= @spot.name %></h1>
+<div class="row">
+  <%# <%= image_tag @spot.image if @spot.image.attached? %> %>
+</div>
+<h2><%= @spot.name %></h2>
 <div class="container">
-  <div class="row">
-    <%# <%= image_tag @spot.image if @spot.image.attached? %> %>
-  </div>
-  <div class="row">
-    <div class="col-sm">
+  <div class="row details">
+    <div class="col-sm desc">
       <%= @spot.description %>
     </div>
-    <div class="col-sm">
-      <div class="amenities">
+    <div class="col-sm amenities">
         <h4>This site has: </h4>
         <ul>
           <% if @spot.has_power %><li>Power</li><% end %>
@@ -16,7 +15,6 @@
           <% if @spot.has_toilet %><li>Toilets</li><% end %>
           <% if @spot.has_shower %><li>Shower</li><% end %>
         </ul>
-      </div>
     </div>
   </div>
 </div>
