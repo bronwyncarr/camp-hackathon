@@ -3,7 +3,7 @@ h2 {
   padding: 50px;
   font-size: 50px;
   font-weight: bold;
-  color: #454842;
+  color: #3e403b;
 }
 
 .container {
@@ -12,4 +12,9 @@ h2 {
 
 body {
   background-color: #babfa8;
+  color: #3e403b;
+}
+
+.navbar {
+  border-bottom: 2px double #3e403b;
 }
