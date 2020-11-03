@@ -10,8 +10,11 @@
     <div class="col-sm desc">
       <%= @spot.description %>
     </div>
+    
     <div class="col-sm amenities">
-        <h4>This site has: </h4>
+        <h4>Address: </h4>
+          <%= render 'shared/address', spot: @spot %>
+        <h4>Amenities: </h4>
         <ul>
           <% if @spot.has_power %><li>Power</li><% end %>
           <% if @spot.has_water %><li>Water</li><% end %>

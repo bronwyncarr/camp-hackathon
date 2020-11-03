@@ -9,6 +9,7 @@
         <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= spot.name %></h5>
+          <%= render 'shared/address', spot: spot %>
           <div class="icons-button">
             <div class="icons">
               <% if spot.has_power %> 🔌 <% end %>
