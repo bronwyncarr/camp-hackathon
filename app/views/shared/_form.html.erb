@@ -1,77 +1,19 @@
-<%=  form_with model: spot, local: true do |f| %>
-  <%= f.fields_for :address, Address.new do |a| %>
-    <div class="form-label">
-      <%= a.label :street_number %> 
-    </div>
-    <div class="form-field">
-      <%= a.number_field :street_number %>  
-    </div>
-    <div class="form-label">
-      <%= a.label :street_name %> 
-    </div>
-    <div class="form-field">
-      <%= a.text_field :street_name %> 
-    </div>
-    <div class="form-label">
-      <%= a.label :postcode %> 
-    </div>
-    <div class="form-field">
-      <%= a.text_field :postcode %>
-    </div>
-    <div class="form-label">
-      <%= a.label :state %> 
-    </div>
-    <div class="form-field">
-      <%= a.text_field :state %>  
-    </div>
-  <% end %>
+  <%= simple_form_for @spot do |f| %>
+    <%= f.simple_fields_for :address, Address.new do |a| %>
+      <%= a.input :street_number %>
+      <%= a.input :street_name %>
+      <%= a.input :postcode %>
+      <%= a.input :state %>
+    <% end %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :max_campers, as: :integer %>
+    <%= f.input :has_power, as: :boolean, boolean_style: :inline %>
+    <%= f.input :has_water, as: :boolean, boolean_style: :inline %>
+    <%= f.input :has_toilet, as: :boolean, boolean_style: :inline %>
+    <%= f.input :has_shower, as: :boolean, boolean_style: :inline %>
+    <%= f.file_field :photo, accept: "photo/png, photo/jpg, photo/jpeg"%>
+    <br><br>
+      <%= f.button :submit, class: "btn show-btn btn-secondary" %>
 
-  <div class="form-label">
-    <%= f.label :name %> 
-  </div>
-  <div class="form-field">
-    <%= f.text_field :name %>
-  </div>
-  <div class="form-label">
-    <%= f.label :description %> 
-  </div>
-  <div class="form-field">
-    <%= f.text_field :description %>
-  </div>
-  <div class="form-label">
-    <%= f.label :max_campers %> 
-  </div>
-  <div class="form-field">
-    <%= f.number_field :max_campers %>
-  </div>
-  <div class="form-label">
-    <%= f.label :has_power %> 
-  </div>
-  <div class="form-field">
-    <%= f.check_box :has_power, {}, true, false  %>
-  </div>
-  <div class="form-label">
-    <%= f.label :has_water %> 
-  </div>
-  <div class="form-field">
-    <%= f.check_box :has_water, {}, true, false  %>
-  </div>
-  <div class="form-label">
-    <%= f.label :has_toilets %> 
-  </div>
-  <div class="form-field">
-    <%= f.check_box :has_toilet, {}, true, false  %>
-  </div>
-  <div class="form-label">
-    <%= f.label :has_shower %> 
-  </div>
-  <div class="form-field">
-    <%= f.check_box :has_shower, {}, true, false  %>
-  </div>
-  <div class="form-field">
-    <%= f.file_field :photo %>
-  </div>
-  <div class="form-field">
-    <%= f.submit %>
-  </div>
-<% end %> 
+  <% end %>
