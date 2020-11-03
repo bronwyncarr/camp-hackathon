@@ -1,5 +1,6 @@
 class SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :edit, :update, :destroy]
+  # before_action :authenticate_user!, except: :page
 
   def index
     @spots = Spot.all
@@ -9,7 +10,6 @@ class SpotsController < ApplicationController
   end
 
 private
-    # Use callbacks to share common setup or constraints between actions.
   def set_spot
       @spot = Spot.find(params[:id])
     end
