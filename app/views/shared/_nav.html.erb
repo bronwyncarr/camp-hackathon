@@ -15,5 +15,6 @@
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
       </ul>
+          <p class='nav-name'>Hello, <%= current_user.username %></p>
     </div>
   </nav>
