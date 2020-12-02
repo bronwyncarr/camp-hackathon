@@ -1,24 +1,27 @@
-# CAMP HACKATHON
+# :tent:CAMP HACKATHON
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## :information_source: About
 
-Things you may want to cover:
+Camp Hackathon was created with another student at Coder Academy as part of a hackathon challenge. The brief was to create a Rails Application with a PostgreSQL database with CRUD functionality in a short amount of time.
 
-* Ruby version
+## :link: R9 R10 Links for this app
 
-* System dependencies
+Github - <https://github.com/bronwyncarr/camp-hackathon>
 
-* Configuration
+Heroku - </>
 
-* Database creation
+# :bulb: Purpose
 
-* Database initialization
+We both have a passion for the outdoors so we created an application where users could record their favourite camping spots.
+The application records the
+- name
+- address
+- description
+- image
+- whether it has power, water, toilets or showers
 
-* How to run the test suite
+:clipboard: Learning outcome
+:white_check_mark: Collaborative planning and allocation of tasks
+:white_check_mark: Git and Github workflows in a team environment
+:white_check_mark: Rails, AWS, Heroku practise
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
