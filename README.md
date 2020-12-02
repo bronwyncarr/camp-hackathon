@@ -24,6 +24,7 @@ The application records the
 Achieved | Objective
 ---------- | ----------------
 :white_check_mark: | Collaborative planning and allocation of tasks
+:white_check_mark: | Working to short, fixed timelines
 :white_check_mark: | Git and Github workflows in a team environment
 :white_check_mark: | Rails, AWS, Heroku practise
 
