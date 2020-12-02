@@ -20,8 +20,10 @@ The application records the
 - image
 - whether it has power, water, toilets or showers
 
-:clipboard: Learning outcome
-:white_check_mark: Collaborative planning and allocation of tasks
-:white_check_mark: Git and Github workflows in a team environment
-:white_check_mark: Rails, AWS, Heroku practise
+# :clipboard: Learning outcome
+Achieved | Objective
+---------- | ----------------
+:white_check_mark: | Collaborative planning and allocation of tasks
+:white_check_mark: | Git and Github workflows in a team environment
+:white_check_mark: | Rails, AWS, Heroku practise
 
